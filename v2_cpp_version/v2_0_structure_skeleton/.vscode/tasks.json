@@ -1,0 +1,29 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Build Lipisengine",
+      "type": "shell",
+      "command": "g++",
+      "args": [
+        "-std=c++20",
+        "-O3",
+        "-Wall",
+        "main.cpp",
+        "uci.cpp",
+        "board.cpp",
+        "move.cpp",
+        "movegen.cpp",
+        "perft.cpp",
+        "zobrist.cpp",
+        "-o", "lipisengine"
+      ],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "problemMatcher": ["$gcc"],
+      "detail": "Build task for Lipisengine chess engine"
+    }
+  ]
+}
