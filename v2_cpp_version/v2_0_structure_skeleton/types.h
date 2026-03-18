@@ -19,6 +19,13 @@ static_assert(sizeof(U64) == 8, "U64 must be exactly 64 bits");
 
 // Side to move / piece color.
 enum class Color : std::uint8_t { WHITE = 0, BLACK = 1 };
+enum class PieceType : std::uint8_t { PAWN = 0, KNIGHT, BISHOP, ROOK, QUEEN, KING };
+
+struct Position {
+    U64 pieces[2][6]; // pieces[Color][PieceType]
+    U64 occupancy[2];
+    U64 occupancy_all;
+};
 
 // Flip side: opposite(Color::WHITE) == Color::BLACK, opposite(Color::BLACK) == Color::WHITE.
 inline Color opposite(Color color) {
