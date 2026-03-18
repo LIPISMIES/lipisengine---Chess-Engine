@@ -5,7 +5,7 @@ Projektin perustiedot:
 * Shakkimoottori: Lipisengine v2
 * C++-kielinen
 * Ohjelmointiympäristö: VSCode, Windows
-* Komentorivityökalu: bash
+* Komentorivityökalu: bash / PowerShell
 * Projektin hakemistorakenne:
 jaakk@LAPTOP-RI0IGN01 MINGW64 ~/OneDrive - TUNI.fi/Työpöytä/lipisengine/v2_cpp_version/v2_0_structure_skeleton
 $ ls
@@ -18,6 +18,9 @@ Shakkimoottorista:
 * Käyttää Bitboard-rakenteita.
 * Inspiraationa Stockfish.
 
-Kääntäminen:
+Kääntäminen omalle koneelle (suorituskykyoptimoitu):
 * g++ komentoriviltä
 * g++ -std=c++20 -O3 -march=native -mtune=native -flto -fno-exceptions -fno-rtti -DNDEBUG 
+
+Dev/Debug-käännös:
+* g++ -std=c++20 -O0 -g
