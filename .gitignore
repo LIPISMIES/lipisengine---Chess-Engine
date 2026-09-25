@@ -60,3 +60,9 @@ Makefile
 # --- OS junk ---
 .DS_Store
 Thumbs.db
+
+# --- Rust / Cargo ---
+target/
+
+# Optional rustfmt backup files
+*.rs.bk
