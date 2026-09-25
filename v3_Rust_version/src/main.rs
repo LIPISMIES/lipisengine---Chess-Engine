@@ -7,9 +7,16 @@
 // You can always return to the original code by clicking the "Reset" button ->
 
 // This is the main function.
-fn main() {
-    // Statements here are executed when the compiled binary is called.
 
-    // Print text to the console.
-    println!("Hello World!");
+use crate::types::{RANKS, FILES, Square, print_all_squares};
+
+mod types;
+mod movegen;
+
+
+
+fn main() {
+    let square1: Square = Square{file: FILES[0], rank: RANKS[0]};   
+    print_all_squares();
+    println!("{}{}", square1.file, square1.rank);
 }
